@@ -102,7 +102,19 @@ export function WorkspacePage({ onToggleTheme, theme }: WorkspacePageProps) {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(255,182,193,0.4),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(144,202,249,0.35),_transparent_35%),linear-gradient(180deg,#fff5f7_0%,#f0f8ff_50%,#fffacd_100%)] px-4 py-4 text-slate-800 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-[1720px] flex-col gap-4">
-        <header className="flex flex-col gap-3 rounded-[30px] border-4 border-purple-300 bg-gradient-to-r from-yellow-200 via-pink-200 to-blue-200 px-5 py-4 shadow-[0_8px_24px_rgba(234,179,8,0.2)] lg:flex-row lg:items-center lg:justify-between">
+        <header
+  className="
+    sticky top-4 z-50
+    flex flex-col gap-3
+    rounded-[30px]
+    border-4 border-purple-300
+    bg-gradient-to-r from-yellow-200/95 via-pink-200/95 to-blue-200/95
+    backdrop-blur-md
+    px-5 py-4
+    shadow-[0_8px_24px_rgba(234,179,8,0.2)]
+    lg:flex-row lg:items-center lg:justify-between
+  "
+>
           <div>
             <p className="text-sm font-bold uppercase tracking-wider text-purple-700">
               🎨 SketchAlign Workspace 🎨
