@@ -76,23 +76,21 @@ export function SketchCanvas({ stageRef }: SketchCanvasProps) {
 
       {size.width > 0 && size.height > 0 ? (
         <Stage
-        className="relative z-10 cursor-grab active:cursor-grabbing"
-
-          ref={stageRef}
-          width={size.width}
-          height={size.height}
-          scaleX={canvas.zoom}
-          scaleY={canvas.zoom}
-          x={canvas.offsetX}
-          y={canvas.offsetY}
-          draggable
-          className="relative z-10 cursor-grab active:cursor-grabbing"
-          onDragStart={(event) => {
-  // Only change cursor when dragging the stage itself
-  if (event.target === event.target.getStage()) {
-    event.target.getStage()?.container().style.setProperty("cursor", "grabbing")
-  }
-}}
+  ref={stageRef}
+  width={size.width}
+  height={size.height}
+  scaleX={canvas.zoom}
+  scaleY={canvas.zoom}
+  x={canvas.offsetX}
+  y={canvas.offsetY}
+  draggable
+  className="relative z-10 cursor-grab active:cursor-grabbing"
+  onDragStart={(event) => {
+    // Only change cursor when dragging the stage itself
+    if (event.target === event.target.getStage()) {
+      event.target.getStage()?.container().style.setProperty("cursor", "grabbing")
+    }
+  }}
 
 onDragEnd={(event) => {
   setCanvasPatch({
